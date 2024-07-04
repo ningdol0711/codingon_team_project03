@@ -12,3 +12,6 @@ React, TypeScript를 이용한 포스코x코딩온 KDT Web 12기 수업 3차 Lea
 <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white">
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white">
 <img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white">
+
+1차 개발 기간 <br />
+2024-06-11 ~ 2024-07-04
