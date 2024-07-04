@@ -1,0 +1,942 @@
+// font
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// footer
+.foot_container {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F4F4F4;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    @media (max-width: 950px) {
+        display: grid;
+    }
+
+    .foot_info {
+        p {
+            margin: 0;
+            padding: 10px;
+        }
+    }
+
+    .foot_sns {
+        display: flex;
+
+        img {
+            margin: 30px;
+        }
+
+        .foot_github {
+            width: 60px;
+        }
+
+        .foot_figma {
+            width: 43px;
+        }
+
+        .foot_notion {
+            width: 52px;
+        }
+    }
+}
+
+// header
+.head_container {
+    width: 99%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+
+    @media (max-width: 950px) {
+        border-bottom: 1px solid #000;
+        margin: 0 0 1rem 0;
+    }
+
+    .head_logo {
+        display: flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            img {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    .head_logo_min {
+        height: 100%;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 70%;
+            }
+        }
+
+        @media (min-width: 951px) {
+            display: none;
+        }
+    }
+
+    .head_nav {
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+
+                li {
+                    list-style: none;
+                    margin: 20px;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    .head_nav_min {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: 951px) {
+            display: none;
+        }
+    }
+
+    .head_loginUser {
+        display: flex;
+        align-items: center;
+
+        .head_profile {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: 25px;
+            cursor: pointer;
+        }
+    }
+}
+
+.head_profileTog {
+    background-color: #000;
+    opacity: 0.7;
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    z-index: 100;
+
+    ul {
+        padding: 0;
+        height: 100%;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                cursor: pointer;
+                color: #FDDBDB;
+            }
+
+            li {
+                list-style: none;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: #FDDBDB;
+        }
+
+        li {
+            list-style: none;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        hr {
+            margin: 0;
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+}
+
+.head_navTog {
+    @extend .head_profileTog;
+    width: 100%;
+    height: 180px;
+    top: 100px;
+    right: 0;
+    font-size: 25px;
+
+    ul {
+        li {
+            padding: 20px;
+        }
+    }
+
+    @media (min-width: 951px) {
+        display: none;
+    }
+}
+
+// review card
+.rev_container {
+    width: 35%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: #fff;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+
+        .rev_img {
+            width: 33%;
+            height: 45%;
+            border: 0.5px solid #ADADAD;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #fff;
+
+            .rev_card_swiper {
+                width: 100%;
+                height: 100%;
+
+                .rev_card_swiper_item {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .noRev_Img {
+                font-size: 30px;
+                margin: 0;
+            }
+        }
+    }
+
+    .rev_content {
+        width: 45%;
+        height: 80%;
+        align-content: center;
+        overflow: auto;
+        margin-left: 10px;
+
+        .rev_star {
+            font-size: 20px;
+        }
+    }
+}
+
+// side bar
+.side_container {
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid #ADADAD;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    .side_all {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+        margin-left: 10px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+
+    .side_hr {
+        border: 0.5px solid #ADADAD;
+        width: 95%;
+        height: 0;
+        margin-left: 5px;
+    }
+
+    .side_category {
+        margin: 0;
+        padding: 0;
+
+        .side_item {
+            list-style: none;
+            padding: 20px;
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// profile
+.profile_container {
+    width: 20%;
+    height: 850px;
+    display: grid;
+    justify-content: center;
+    align-content: space-around;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: #FFFCF6;
+    text-align: center;
+    margin-left: 10px;
+
+    @media (max-width: 950px) {
+        width: 90%;
+        height: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    h3 {
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    .profile_content {
+        height: 350px;
+        display: grid;
+        align-content: space-evenly;
+
+        @media (max-width: 950px) {
+            height: 100%;
+        }
+    }
+
+    .profile_user {
+        @media (max-width: 950px) {
+            padding-bottom: 20px;
+        }
+    }
+
+    .profile_userDel {
+        width: 150px;
+        height: 50px;
+        justify-self: center;
+
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+}
+
+// banner
+.banner_container {
+    width: 97%;
+    height: 350px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .banner_img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background-image: url('../images/Product/LG\ 코드제로\ R5\ 올인원타워\ 로봇청소기.png');
+        filter: brightness(40%);
+    }
+
+    .banner_text {
+        position: absolute;
+        top: 80px;
+        left: 80px;
+        font-size: 45px;
+        color: #fff;
+        font-family: "Do Hyeon", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
+// login
+
+.login_form_back {
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    height: 100%;
+    z-index: 102;
+}
+
+#login_form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 350px;
+    height: 550px;
+    padding: 25px;
+    background-color: #FDDBDB;
+    box-shadow: 0px 15px 60px #FDDBDB;
+    outline: 1px solid #FDDBDB;
+    border-radius: 10px;
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    #login_body {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        left: 25px;
+        width: 230px;
+        margin: -156px auto 0 auto;
+
+        #login_welcome {
+            text-align: center;
+            line-height: 1;
+
+            #login_welcome-1 {
+                color: #005477;
+                font-weight: 600;
+                font-size: 40px;
+            }
+
+            #login_welcome-2 {
+                color: #000;
+                font-size: 15px;
+                margin-top: 17px;
+            }
+        }
+
+        #login_input {
+            margin-top: 40px;
+
+            .login_input_item {
+                padding: 11px 25px;
+                background: rgb(255, 255, 255, 0.6);
+                border: 1px solid #005477;
+                line-height: 1;
+                border-radius: 8px;
+
+                &:focus {
+                    border: 1px solid #005477;
+                }
+
+                &:not(last-child) {
+                    margin-bottom: 15px;
+                }
+
+                input {
+                    width: 100%;
+                    background: none;
+                    font-size: 13.4px;
+                    color: #005477;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        #login_submit {
+            margin-top: 20px;
+
+            #login_submitBtn {
+                display: block;
+                width: 100%;
+                color: #005477;
+                background-color: transparent;
+                font-weight: 600;
+                font-size: 14px;
+                margin: 0;
+                padding: 14px 13px 12px 13px;
+                border: 0;
+                outline: 1px solid #005477;
+                border-radius: 8px;
+                line-height: 1;
+                cursor: pointer;
+                transition: all ease-in-out .3s;
+
+                &:hover {
+                    transition: all ease-in-out .3s;
+                    background-color: #005477;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #login_to_signup {
+            text-align: center;
+            margin-top: 10px;
+
+            a {
+                color: #005477;
+                font-size: 12px;
+                text-decoration: underline;
+
+                &:hover {
+                    transition: all ease-in-out .3s;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#signup_form {
+    @extend #login_form;
+
+    #signup_body {
+        @extend #login_body;
+        position: absolute;
+        top: 40%;
+    }
+}
+
+// product page
+.propg_main_container {
+    display: flex;
+    width: 100%;
+
+    .propg_side_container {
+        width: 10%;
+        height: 50%;
+        margin-left: 10px;
+        position: sticky;
+        top: 100px;
+
+        @media screen and (max-width: 950px) {
+            position: relative;
+            top: 0px;
+        }
+    }
+
+
+    .propg_sec_container {
+        width: 90%;
+        margin-left: 10px;
+
+        .propg_product_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 30px 0;
+            place-items: center;
+
+            @media screen and (max-width: 950px) {
+                grid-template-columns: auto;
+            }
+
+            .proCard {
+                width: 90%;
+                height: 456px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .propg_main_container {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .propg_sec_container {
+            margin: 0;
+        }
+
+        .propg_side_container {
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .propg_sec_container {
+            .banner_container {
+                margin: 0;
+                display: none;
+            }
+
+            .propg_product_container {
+                flex-direction: column;
+                padding: 0;
+                justify-content: center;
+                align-items: center;
+
+                .proCard {
+                    width: 90%;
+                    height: auto;
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        .search {
+            width: 100%;
+        }
+    }
+}
+
+// product detail page
+.prodetpg_info_container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.prodetpg_rev_container {
+    padding: 20px;
+
+    .prodetpg_rev_txt {
+        // @extend .proInfo_proName;
+        font-size: 32px;
+        font-weight: 600;
+        text-shadow: 2px 4px 10px #ADADAD;
+        margin: 10px 0;
+        margin-left: 7%;
+        font-family: "Do Hyeon", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .prodetpg_rev_cont {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        animation: slideUp 2s ease-out;
+    }
+}
+
+.prodetpg_mobileInfo_box {
+    display: none;
+}
+
+@media screen and (max-width: 950px) {
+    .prodetpg_main {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .prodetpg_info_container {
+            .proInfo {
+                display: grid;
+                grid-template-columns: auto;
+                width: auto;
+
+                .proInfo_proInfo_des {
+                    width: 90%;
+
+                    .proInfo_proName {
+                        display: none;
+                    }
+
+                    .proInfo_proLease_price {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .prodetpg_rev_container {
+            overflow-x: auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .prodetpg_rev_txt {
+                display: none;
+            }
+
+            .prodetpg_rev_cont {
+                .rev_container {
+                    margin: 0 1rem;
+                    width: 90vw;
+                    height: 400px;
+                }
+
+                svg {
+                    display: none;
+                }
+            }
+        }
+
+        .prodetpg_mobileInfo_box {
+            display: block;
+            padding-left: 20px;
+        }
+    }
+}
+
+// event page
+.eventpg_container {
+    p {
+        font-size: 32px;
+        font-weight: 600;
+        text-shadow: 2px 4px 10px #ADADAD;
+        margin: 20px 0;
+        text-align: end;
+        margin-right: 2%;
+        font-family: "Do Hyeon", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .eventpg_banner_container {
+        display: grid;
+        gap: 25px;
+    }
+}
+
+// mypage
+
+.mypg_content_container {
+    display: flex;
+
+    @media (max-width: 950px) {
+        display: grid;
+        justify-items: center;
+        padding: 10px;
+    }
+
+    .mypg_like_container {
+        border: 0.5px solid #000;
+        border-radius: 10px;
+        width: 40%;
+        margin: 0 20px;
+        padding: 20px;
+
+        @media (max-width: 950px) {
+            width: 90%;
+            margin-top: 10px;
+        }
+
+        .mypg_like_text {
+            display: flex;
+            padding-bottom: 20px;
+
+            p {
+                font-size: 25px;
+                font-weight: 600;
+                text-shadow: 2px 4px 10px #ADADAD;
+                margin: 0;
+                padding: 0 10px;
+            }
+        }
+
+        .mypg_like_content {
+            width: 100%;
+            height: 90%;
+
+            @media (max-width: 950px) {
+                height: 85%;
+            }
+
+            .mypg_like_item {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                place-items: center;
+
+                .proCard {
+                    .proCard_img_container {
+                        .proCard_img {
+                            width: 70%;
+                            height: auto;
+                        }
+                    }
+                }
+
+                @media (max-width: 950px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .postDel {
+            border-radius: 8px !important;
+        }
+    }
+
+    .mypg_userDel {
+        width: 150px;
+        height: 50px;
+        justify-self: center;
+        margin-top: 10px;
+
+        @media (min-width: 951px) {
+            display: none;
+        }
+    }
+}
+
+
+// review post page
+
+.revpg_post_selec {
+    width: 100%;
+    height: 50px;
+
+    select {
+        width: 30%;
+        height: 100%;
+        margin-right: 20px;
+        margin-left: 10px;
+        border-radius: 10px;
+        padding-left: 20px;
+    }
+}
+
+.revpg_post_content {
+    width: 100%;
+    height: 700px;
+
+    .revpg_post_input {
+        width: 99%;
+        height: 50px;
+        margin: 10px;
+        padding: 20px;
+        outline: none;
+        border-width: 0 0 0.5px;
+    }
+
+    .revpg_post_text {
+        width: 99%;
+        height: 80%;
+        margin: auto;
+    }
+}
+
+.revpg_foot_container {
+    @extend .foot_container;
+    height: 200px;
+    justify-content: space-between;
+    padding: 0 40px;
+
+    .revpg_foot_upload {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .revpg_foot_label {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            border: 0;
+            outline: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px black;
+            font-size: 24px;
+            text-align: center;
+            padding-top: 10px;
+
+            &:active {
+                box-shadow: none;
+            }
+        }
+
+        .revpg_foot_file {
+            display: none;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 30px;
+            font-size: 25px;
+        }
+    }
+}
